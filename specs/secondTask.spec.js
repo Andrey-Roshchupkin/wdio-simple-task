@@ -9,6 +9,7 @@ describe("Bring It On", () => {
     // 1. Open https://pastebin.com or a similar service in any browser
     await browser.url("https://pastebin.com/");
     // 2. Create a New Paste with the following details:
+    await $("a.header__btn").click();
     // * Code:
     // git config --global user.name "New Sheriff in Town"
 
