@@ -18,16 +18,17 @@ describe("Bring It On", () => {
     // git push origin master --force
     await $("textarea#postform-text").setValue(textToEnter);
     // * Syntax Highlighting: "Bash"
-    await $('span[data-select2-id="1"]').click();
+    await $("span#select2-postform-format-container").click();
     await $("li=Bash").click();
     // * Paste Expiration: "10 Minutes"
-    await $('span[data-select2-id="3"]').click();
+    await $("span#select2-postform-expiration-container").click();
     await $("li=10 Minutes").click();
     // * Paste Name / Title: "how to gain dominance among developers"
     await $("input#postform-name").setValue(
       "how to gain dominance among developers"
     );
     // 3. Save paste
+    await browser.scroll(0, 500);
     await $("button=Create New Paste").click();
   });
   //   and check the following:

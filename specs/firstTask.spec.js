@@ -7,7 +7,7 @@ describe("I can win!", () => {
     // * Code: "Hello from WebDriver"
     await $("textarea#postform-text").setValue("Hello from WebDriver");
     // * Paste Expiration: "10 Minutes"
-    await $('span[data-select2-id="3"]').click();
+    await $("span#select2-postform-expiration-container").click();
     await $("li=10 Minutes").click();
     // * Paste Name / Title: "helloweb"
     await $("input#postform-name").setValue("helloweb");
