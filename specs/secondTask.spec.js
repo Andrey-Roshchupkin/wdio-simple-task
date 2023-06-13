@@ -18,6 +18,7 @@ describe("Bring It On", () => {
     // git push origin master --force
     await $("textarea#postform-text").setValue(textToEnter);
     // * Syntax Highlighting: "Bash"
+    await browser.scroll(0, 600);  
     await $("span#select2-postform-format-container").click();
     await $("li=Bash").click();
     // * Paste Expiration: "10 Minutes"
@@ -28,8 +29,9 @@ describe("Bring It On", () => {
       "how to gain dominance among developers"
     );
     // 3. Save paste
-    await browser.scroll(0, 500);
+    await browser.scroll(0, 300); 
     await $("button=Create New Paste").click();
+    await browser.pause(1000)
   });
   //   and check the following:
   it("Browser page title matches Paste Name / Title", async () => {
